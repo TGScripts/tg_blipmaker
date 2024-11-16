@@ -29,7 +29,7 @@ AddEventHandler("tg_blipmaker:checkcreationperms", function(blipData)
     if xPlayer and isPlayerAuthorized(xPlayer) then
         TriggerClientEvent("tg_blipmaker:createblip", source, blipData)
     else
-        TriggerClientEvent("tg_blipmaker:notify", source, "Du bist ~r~nicht berechtigt~s~, diesen Befehl auszuführen!")
+        TriggerClientEvent("tg_blipmaker:notify", source, _('not_authorized'))
         print("Player ID: "..source.." is not authorized to create a blip.")
     end
 end)
@@ -40,7 +40,7 @@ AddEventHandler("tg_blipmaker:checkdeletionperms", function()
     if xPlayer and isPlayerAuthorized(xPlayer) then
         TriggerClientEvent("tg_blipmaker:deleteblip", source)
     else
-        TriggerClientEvent("tg_blipmaker:notify", source, "Du bist ~r~nicht berechtigt~s~, diesen Befehl auszuführen!")
+        TriggerClientEvent("tg_blipmaker:notify", source, _('not_authorized'))
         print("Player ID: "..source.." is not authorized to delete a blip.")
     end
 end)
@@ -57,7 +57,7 @@ end
 
 if Config.Debug then
     RegisterCommand('debugblips', function()
-        print('Aktuelle custom Blips auf dem Server:')
+        print(_('debug_message'))
         for i, blipData in ipairs(blips) do
             print(i, blipData.text, "~s~" .. json.encode(blipData.coords))
         end

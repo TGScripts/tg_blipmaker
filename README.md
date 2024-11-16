@@ -17,9 +17,9 @@
 </p>
 
 ![Discord](https://img.shields.io/discord/1101900001392721931?label=Discord%20Server) 
-![Release Date](https://img.shields.io/github/release-date/LetsTiger/tg_blipmaker?label=Last%20Release%20Date) 
-![Release](https://img.shields.io/github/v/release/LetsTiger/tg_blipmaker?label=Last%20Release%20(Download%20below)) 
-![Downloads (all assets, all releases)](https://img.shields.io/github/downloads/LetsTiger/tg_blipmaker/total?label=Downloads)
+![Release Date](https://img.shields.io/github/release-date/TGScripts/tg_blipmaker?label=Last%20Release%20Date) 
+![Release](https://img.shields.io/github/v/release/TGScripts/tg_blipmaker?label=Last%20Release%20(Download%20below)) 
+![Downloads (all assets, all releases)](https://img.shields.io/github/downloads/TGScripts/tg_blipmaker/total?label=Downloads)
 
 ---
 > [!CAUTION]
@@ -35,7 +35,7 @@
 
 > [!NOTE]
 > ## Features
-> **tg_blipmaker** ist ein Blipmaker Script für FiveM. Es bietet viele Features welche in der config selbst umgestellt werden. Aktuell gibt es nur eine deutsche Version.
+> **tg_blipmaker** ist ein Blipmaker Script für FiveM. Es bietet viele Features welche in der config selbst umgestellt werden.
 > Eine Liste der Main Features:
 >
 > - Blips Ingame erstellen
@@ -52,7 +52,7 @@
 <hr>
 
 ## Download
-[![Latest Release](https://img.shields.io/github/v/release/LetsTiger/tg_blipmaker?label=latest)](https://github.com/LetsTiger/tg_blipmaker/releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/TGScripts/tg_blipmaker?label=latest)](https://github.com/TGScripts/tg_blipmaker/releases/latest)
 
 <hr>
 

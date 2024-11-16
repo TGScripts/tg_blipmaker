@@ -11,7 +11,7 @@ end, false)
 RegisterNetEvent('tg_blipmaker:createblip')
 AddEventHandler('tg_blipmaker:createblip', function(args)
     if #args < 4 then
-        tg_shownotification("Bitte ~y~Bliptyp~s~, ~y~Blipname~s~, ~y~Blipscale~s~ sowie ~y~Blipfarbe~s~ angeben.")
+        tg_shownotification(_('args_missing'))
         return
     end
 
@@ -25,7 +25,7 @@ AddEventHandler('tg_blipmaker:createblip', function(args)
     end
 
     if bliptype < 0 or bliptype > 883 or blipscale < 0.5 or blipscale > 10 or blipcolor < 0 or blipcolor > 85 then
-        tg_shownotification("Ungültige Parameter: ~y~Typ [0-883]~s~, ~y~Scale [0.5-10]~s~, ~y~Farbe [0-85]~s~.")
+        tg_shownotification(_('invalid_parameter'))
         return
     end
 
@@ -33,7 +33,7 @@ AddEventHandler('tg_blipmaker:createblip', function(args)
     local blipData = {coords = playercoords, type = bliptype, text = blipname, scale = blipscale, color = blipcolor, handle = nil}
 
     TriggerServerEvent('tg_blipmaker:addblip', blipData)
-    tg_shownotification("Erfolgreich einen neuen Blip erstellt.")
+    tg_shownotification(_('new_successfull'))
 end)
 
 RegisterCommand('removeblip', function()
@@ -43,7 +43,7 @@ end, false)
 RegisterNetEvent('tg_blipmaker:deleteblip')
 AddEventHandler('tg_blipmaker:deleteblip', function()
     if #blips == 0 then
-        tg_shownotification("Es gibt keine Blips zum Entfernen.")
+        tg_shownotification(_('no_blips_to_remove'))
         return
     end
 
@@ -60,9 +60,9 @@ AddEventHandler('tg_blipmaker:deleteblip', function()
     if closestIndex then
         local blipHandle = blips[closestIndex].handle
         TriggerServerEvent('tg_blipmaker:removeblip', closestIndex, blipHandle)
-        tg_shownotification("Der nächste Blip wurde entfernt.")
+        tg_shownotification(_('blip_removed'))
     else
-        tg_shownotification("Kein Blip in der Nähe zum Entfernen.")
+        tg_shownotification(_('rem_no_blip_nearby'))
     end
 end)
 
@@ -107,15 +107,15 @@ function tg_shownotification(message)
     EndTextCommandThefeedPostMessagetext("CHAR_DEFAULT", "CHAR_DEFAULT", false, 0, "TG Blipmaker Script", "")
 end
 
-TriggerEvent('chat:addSuggestion', '/addblip', 'Platziere einen Blip an deiner aktuellen Position.', {
-    { name="Blip Typ", help="Welches Blip Icon soll verwendet werden (0 - 883)?" },
-    { name="Blip Name", help="Wie soll der Blip heißen?" },
-    { name="Blip Größe", help="Wie groß soll der Blip sein (0.5 - 10)?" },
-    { name="Blipfarbe", help="Welche Farbe soll der Blip haben (0 - 85)?" }
+TriggerEvent('chat:addSuggestion', '/addblip', _('chat_add'), {
+    { name=_('chat_add_type_title'), help=_('chat_add_type_help') },
+    { name=_('chat_add_name_title'), help=_('chat_add_name_help') },
+    { name=_('chat_add_scale_title'), help=_('chat_add_scale_help') },
+    { name=_('chat_add_color_title'), help=_('chat_add_color_help') }
 })
 
-TriggerEvent('chat:addSuggestion', '/removeblip', 'Entferne einen nahe gelegenen Blip (50m).', {})
+TriggerEvent('chat:addSuggestion', '/removeblip', _('chat_rem_blip'), {})
 
 if Config.Debug then
-    TriggerEvent('chat:addSuggestion', '/debugblips', 'Liste aller aktiven custom Blips.', {})
+    TriggerEvent('chat:addSuggestion', '/debugblips', _('chat_debug_blip'), {})
 end
