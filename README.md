@@ -1,7 +1,7 @@
 <p align="center">
     <hr>
         <p align="center">
-            <img src="https://cdn.discordapp.com/attachments/1138437086781902959/1254122906485788822/TG_Logo.png?ex=66d5f2f9&is=66d4a179&hm=c66cdc8f5cf5368dd670c22eb52b4b6d891726bf7f83b8334b59b1ea4f776190&" width="100" height="100"></img>
+            <img src="https://avatars.githubusercontent.com/u/180347510?s=200&v=4" width="100" height="100"></img>
         </p>
     <h1 align="center">
     TG SCRIPTS
@@ -9,9 +9,7 @@
     <h4 align="center">
     <b>TG Scripts auf Discord: </b><a href="https://discord.gg/X2zxGxY6XY"><img src="https://discordapp.com/api/guilds/1101900001392721931/widget.png?style=shield"></img></a>
     <br/>
-    <b>TG Scripts Dokumentation: </b>COMING SOON
-    <br/>
-    <b>TG Scripts Website: </b>COMING SOON
+    <b>TG Scripts Dokumentation: </b><a href="https://tg-scripts.gitbook.io/tg-docs">TG Docs</a>
     </h4>
     <hr>
 </p>
